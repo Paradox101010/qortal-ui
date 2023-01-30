@@ -350,7 +350,7 @@ export default class AltcoinHDWallet {
         // Append 1 byte '0x00' (to make the key data 33 bytes, DO THIS ONLY FOR PRIVATE KEYS )
         s.push(0)
 
-        //if the private key length is less than 32 let's add leading zeros 
+        //if the private key length is less than 32 let's add leading zeros
         if(this.privateKey.length<32){
             for(let i=this.privateKey.length;i<32;i++){
                 s.push(0)
@@ -852,7 +852,9 @@ export default class AltcoinHDWallet {
 
     returnWallet() {
 
-        // Will be limiting the exported Wallet Object to just the Master keys and Legacy Addresses
+        // Will be limiting the exported Wallet Object to just the 10cd
+
+        aster keys and Legacy Addresses
 
         const wallet = {
             derivedMasterPrivateKey: this.masterPrivateKey,
